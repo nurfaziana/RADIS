@@ -1,0 +1,290 @@
+﻿@model radisutm.ViewModel.DashboardDataTable
+
+
+
+
+
+<div class="m-subheader ">
+    <div class="d-flex align-items-center">
+        <div class="mr-auto">
+            <!-- subheader-->
+            <h3 class="m-subheader__title ">
+                Grant Dashboard
+            </h3>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="m-content">
+    <!--Begin::Main Portlet-->
+    <div class="row">
+        <div class="col-xl-12">
+            <!--begin:: Widgets/Audit Log-->
+            <div class="m-portlet m-portlet--full-height ">
+                <div class="m-portlet__head">
+                    <div class="m-portlet__head-caption">
+                        <div class="m-portlet__head-title">
+                            <h3 class="m-portlet__head-text">
+                                Grant List
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="m-portlet__body">
+                    <div class="m-portlet__body-tools">
+
+                        <ul class="m-widget27__nav-items nav nav-pills nav-fill " role="tablist">
+                            <li class="nav-item m-tabs__item">
+                                <a class="nav-link m-tabs__link active" data-toggle="tab" href="#m_widget4_tab1_content" role="tab">
+                                    Active
+                                </a>
+                            </li>
+                            <li class="nav-item m-tabs__item;" >
+                                <a class="nav-link m-tabs__link" data-toggle="tab" href="#m_widget4_tab2_content" role="tab">
+                                    Not Active
+                                </a>
+                            </li>
+                            <li class="nav-item m-tabs__item">
+                                <a class="nav-link m-tabs__link" data-toggle="tab" href="#m_widget4_tab3_content" role="tab">
+                                    Proposal Draft
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="m_widget4_tab1_content">
+                            <div class="m-scrollable" data-scrollable="true" data-max-height="400" style="height: 400px; overflow: hidden;">
+                                <div class="m-list-timeline m-list-timeline--skin-light">
+                                    <!--begin::Section-->
+                                    <div class="m-section">
+                                        <div class="m-section__content">
+                                            <table class="table table-bordered table-hover">
+                                                <thead class="thead-default">
+                                                    <tr>
+                                                        <th>
+                                                            No. 1
+                                                        </th>
+                                                        <th width="12%">
+                                                            Reference No
+                                                        </th>
+                                                        <th>
+                                                            Cost Center No
+                                                        </th>
+                                                        <th width="20%">
+                                                            Proposal Status
+                                                        </th>
+                                                        <th>
+                                                            Status
+                                                        </th>
+                                                        <th width="20%">
+                                                            Project Leader
+                                                        </th>
+                                                        <th width="20%">
+                                                            Project Title
+                                                        </th>
+                                                        <th width="20%">
+                                                            Grant Type
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+
+                                                    @for (int i = 0; i < @Model.dt1.Rows.Count; i++)
+                                                    {
+                                                        var a = 1 + i;
+                                                        <tr>
+                                                            <th>
+                                                                @a
+                                                            </th>
+                                                            <td scope="row">
+                                                                <font size="2"><a href="@Url.Action("GrantProfile", "Grant" ,new { @id =@Model.dt1.Rows[i][0]})">@Model.dt1.Rows[i][0] </a></font>
+                                                            </td>
+                                                            <td>
+                                                                <font size="2">@Model.dt1.Rows[i][2]</font>
+                                                            </td>
+                                                            <td>
+                                                                <font size="2">@Model.dt1.Rows[i][9]</font>
+                                                            </td>
+                                                            <td>
+                                                                <font size="2">@Model.dt1.Rows[i][3]</font>
+                                                            </td>
+                                                            <td>
+                                                                <font size="2">@Model.dt1.Rows[i][7]</font>
+                                                            </td>
+                                                            <td>
+                                                                <font size="2">@Model.dt1.Rows[i][1]</font>
+                                                            </td>
+                                                            <td>
+                                                                <font size="2">@Model.dt1.Rows[i][5]</font>
+                                                            </td>
+                                                        </tr>
+                                                    }
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane active" id="m_widget4_tab2_content">
+                            <div class="m-scrollable" data-scrollable="true" data-max-height="400" style="height: 400px; overflow: hidden;">
+                                <div class="m-list-timeline m-list-timeline--skin-light">
+                                    <!--begin::Section-->
+                                    <div class="m-section">
+                                        <div class="m-section__content">
+                                            <table class="table table-bordered table-hover">
+                                                <thead class="thead-default">
+                                                    <tr>
+                                                        <th>
+                                                            No.
+                                                        </th>
+                                                        <th width="12%">
+                                                            Reference No
+                                                        </th>
+                                                        <th>
+                                                            Cost Center No
+                                                        </th>
+                                                        <th width="20%">
+                                                            Proposal Status
+                                                        </th>
+                                                        <th>
+                                                            Status
+                                                        </th>
+                                                        <th width="20%">
+                                                            Project Leader
+                                                        </th>
+                                                        <th width="20%">
+                                                            Project Title
+                                                        </th>
+                                                        <th width="20%">
+                                                            Grant Type
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+
+                                                    @for (int i = 0; i < @Model.dt2.Rows.Count; i++)
+                                                    {
+                                                        var a = 1 + i;
+                                                        <tr>
+                                                            <th>
+                                                                @a
+                                                            </th>
+                                                            <td scope="row">
+                                                                <font size="2"><a href="@Url.Action("GrantProfile", "Grant" ,new { @id =@Model.dt2.Rows[i][0]})">>@Model.dt2.Rows[i][0] </a></font>
+                                                            </td>
+                                                            <td>
+                                                                <font size="2">@Model.dt2.Rows[i][2]</font>
+                                                            </td>
+                                                            <td>
+                                                                <font size="2">@Model.dt2.Rows[i][9]</font>
+                                                            </td>
+                                                            <td>
+                                                                <font size="2">@Model.dt2.Rows[i][3]</font>
+                                                            </td>
+                                                            <td>
+                                                                <font size="2">@Model.dt2.Rows[i][7]</font>
+                                                            </td>
+                                                            <td>
+                                                                <font size="2">@Model.dt2.Rows[i][1]</font>
+                                                            </td>
+                                                            <td>
+                                                                <font size="2">@Model.dt2.Rows[i][5]</font>
+                                                            </td>
+                                                        </tr>
+                                                     }
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane active" id="m_widget4_tab3_content">
+                            <div class="m-scrollable" data-scrollable="true" data-max-height="400" style="height: 400px; overflow: hidden;">
+                                <div class="m-list-timeline m-list-timeline--skin-light">
+                                    <!--begin::Section-->
+                                    <div class="m-section">
+                                        <div class="m-section__content">
+                                            <table class="table table-bordered table-hover">
+                                                <thead class="thead-default">
+                                                    <tr>
+                                                        <th>
+                                                            No.
+                                                        </th>
+                                                        <th width="12%">
+                                                            Reference No
+                                                        </th>
+                                                        <th>
+                                                            Cost Center No
+                                                        </th>
+                                                        <th width="20%">
+                                                            Proposal Status
+                                                        </th>
+                                                        <th>
+                                                            Status
+                                                        </th>
+                                                        <th width="20%">
+                                                            Project Leader
+                                                        </th>
+                                                        <th width="20%">
+                                                            Project Title
+                                                        </th>
+                                                        <th width="20%">
+                                                            Grant Type
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+
+                                                    @for (int i = 0; i < @Model.dt3.Rows.Count; i++)
+                                                    {
+
+                                                        var a = 1 + i;
+                                                        <tr>
+                                                            <th>
+                                                                @a
+                                                            </th>
+                                                            <td scope="row">
+                                                                <font size="2"><a href="@Url.Action("GrantProfile", "Grant" ,new { @id =@Model.dt3.Rows[i][0]})">@Model.dt3.Rows[i][0] </a></font>
+                                                            </td>
+                                                            <td>
+                                                                <font size="2">@Model.dt3.Rows[i][2]</font>
+                                                            </td>
+                                                            <td>
+                                                                <font size="2">@Model.dt3.Rows[i][9]</font>
+                                                            </td>
+                                                            <td>
+                                                                <font size="2">@Model.dt3.Rows[i][3]</font>
+                                                            </td>
+                                                            <td>
+                                                                <font size="2">@Model.dt3.Rows[i][7]</font>
+                                                            </td>
+                                                            <td>
+                                                                <font size="2">@Model.dt3.Rows[i][1]</font>
+                                                            </td>
+                                                            <td>
+                                                                <font size="2">@Model.dt3.Rows[i][5]</font>
+                                                            </td>
+                                                        </tr>
+                                                    }
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end:: Widgets/Audit Log-->
+        </div>
+    </div>
+    <!--End::Main Portlet-->
+</div>
+@*@endsection*@

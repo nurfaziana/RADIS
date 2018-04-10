@@ -1,0 +1,19 @@
+﻿@model string
+
+
+<div class="m-portlet__head-tools">
+    <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
+
+
+
+        <button type="button" class="btn btn-primary active" onclick="location.href='@Url.Action("GrantProfile", "Grant", new { id =@Model })'">Project Info</button>
+        <button type="button" class="btn btn-primary btn-sm" onclick="location.href='@Url.Action("FinancialInfo", "Grant", new { id =@Model })'">Financial Info</button>
+        <button type="button" class="btn btn-primary btn-sm">Project Timeline</button>
+        <button type="button" class="btn btn-primary btn-sm">Extension</button>
+        <button type="button" class="btn btn-primary btn-sm">Claim & Payment</button>
+        <button type="button" class="btn btn-primary btn-sm">Activity</button>
+        <button type="button" class="btn btn-primary btn-sm">Appointment</button>
+        <button type="button" class="btn btn-primary btn-sm">Report</button>
+        <button type="button" class="btn btn-primary btn-sm">Member Management</button>
+    </div>
+</div>

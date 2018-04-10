@@ -1,0 +1,334 @@
+﻿@model radisutm.Models.GrantModel
+<div class="m-subheader ">
+    <div class="d-flex align-items-center">
+        <div class="mr-auto">
+            @*<h3 class="m-subheader__title m-subheader__title--separator">Draggable Portlets</h3>*@
+            <ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
+                <li class="m-nav__item m-nav__item--home">
+                    <a href="#" class="m-nav__link m-nav__link--icon">
+                        <i class="m-nav__link-icon la la-home"></i>
+                    </a>
+                </li>
+                <li class="m-nav__separator">-</li>
+                <li class="m-nav__item">
+                    <a href="" class="m-nav__link">
+                        <span class="m-nav__link-text">Financial Info - @Model.REFERENCE_NO</span>
+                    </a>
+                </li>
+
+
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="m-content">
+    <div class="row">
+        <div class="col-lg-12">
+
+
+            <div class="m-portlet m-portlet--primary m-portlet--head-solid-bg m-portlet--bordered">
+                <div class="">
+                    <div class="m-portlet__head-caption">
+                        <div class="m-portlet__head-title">
+                     
+                        </div>
+                    </div>
+                    @Html.Partial("InsideNavigation", @Model.REFERENCE_NO)
+                </div>
+                <div class="m-portlet__body">
+                    @Html.Partial("GrantInfo")     
+                    
+                    <div>
+
+                        <table class="table table-bordered m-table m-table--border-brand m-table--head-bg-brand" style="font:small">
+                            <thead>
+                                <tr>
+                                    <th>V-Series </th>
+                                    <th>SODO Type</th>
+                                    <th>Approved Allocation (Original) <br> (RADIS) </th>
+                                    <th>Approved Allocation (New) <br> (RADIS)</th>
+                                    <th>Received Allocation <br>(UTMFin)</th>
+                                    <th>Current Expenditure <br> Include Committed(UTMFin)</th>
+                                    <th>Received Current Balance <br>(Received Allocation - Current Expenditure)</th>
+                                    <th>Percentage of expenditure (%)<br>(Approved Allocation (new))</th>
+                                    <th>Percentage of expenditure (%)<br>(Received Allocation)</th>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td rowspan="5" >V11000 - Salary, Wages &amp; Overtime</td>
+
+                                <td ><bean:write name="PemantauanForm" property="sodoName_1" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b11_cb" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b11_a" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b11_s" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b11_ce" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b11_cb1" /></td>
+                                <td  rowspan="5"></td>
+                            </tr>
+
+                            <tr>
+                                <td ><bean:write name="PemantauanForm" property="sodoName_2" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b12_cb" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b12_a" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b12_s" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b12_ce" /></td>                            
+                                <td ><bean:write name="PemantauanForm" property="b12_cb1" /></td>
+                            </tr>
+                            <tr>
+                                <td ><bean:write name="PemantauanForm" property="sodoName_13" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b13_cb" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b13_a" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b13_s" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b13_ce" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b13_cb1" /></td>
+                            </tr>
+                            <tr>
+                                <td ><bean:write name="PemantauanForm" property="sodoName_14" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b14_cb" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b14_a" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b14_s" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b14_cb1" /></td>
+                            </tr>
+                            <tr>
+                                <td ><bean:write name="PemantauanForm" property="sodoName_15" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b15_cb" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b15_a" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b15_s" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b15_ce" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b15_cb1" /></td>
+                            </tr>
+                            <tr bgcolor="#FFFF99">
+                                <td colspan="2" ><strong>Sub-Total (V-Series)</strong></td>
+                                <td ><b><bean:write name="PemantauanForm" property="v11_cb" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="v11_a" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="v11_r" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="v11_ce" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="v11_cb1" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="percenV11" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="percenRAllocationV11" /></b></td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2" >V21000 - Travelling Expenses &amp; Subsistence</td>
+                                <td ><bean:write name="PemantauanForm" property="sodoName_21" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b21_cb" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b21_a" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b21_s" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b21_ce" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b21_cb1" /></td>
+                                <td  rowspan="2"></td>
+                            </tr>
+                            <tr>
+                                <td ><bean:write name="PemantauanForm" property="sodoName_22" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b22_cb" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b22_a" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b22_s" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b22_ce" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b22_cb1" /></td>
+                            </tr>
+                            <tr bgcolor="#FFFF99">
+                                <td colspan="2" ><strong>Sub-Total (V-Series)</strong></td>
+                                <td ><b><bean:write name="PemantauanForm" property="v21_cb" /></b></td>
+                                <td ><bean:write name="PemantauanForm" property="v12_a" /></td>
+                                <td ><b><bean:write name="PemantauanForm" property="v12_r" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="v21_ce" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="v21_cb1" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="percenV21" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="percenRAllocationV21" /></b></td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2" bgcolor="#FFFFFF" >V24000 -Rentals</td>
+                                <td bgcolor="#FFFFFF" ><bean:write name="PemantauanForm" property="sodoName_23" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b23_cb" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b23_a" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b23_s" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b23_ce" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b23_cb1" /></td>
+                                <td  rowspan="2"></td>
+                            </tr>
+                            <tr>
+                                <td ><bean:write name="PemantauanForm" property="sodoName_24" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b24_cb" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b24_a" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b24_s" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b24_ce" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b24_cb1" /></td>
+                            </tr>
+                            <tr bgcolor="#FFFF99">
+                                <td colspan="2" ><strong>Sub-Total (V-Series)</strong></td>
+                                <td ><b><bean:write name="PemantauanForm" property="v24_cb" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="v24_a" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="v24_r" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="v24_ce" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="v24_cb1" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="percenV24" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="percenRAllocationV24" /></b></td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2" >V26000 - Research Materials &amp; Supplies</td>
+                                <td ><bean:write name="PemantauanForm" property="sodoName_26" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b26_cb" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b26_a" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b26_s" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b26_ce" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b26_cb1" /></td>
+                                <td  rowspan="2"></td>
+                            </tr>
+                            <tr>
+                                <td ><bean:write name="PemantauanForm" property="sodoName_27" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b27_cb" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b27_a" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b27_s" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b27_ce" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b27_cb1" /></td>
+                            </tr>
+                            <tr bgcolor="#FFFF99">
+                                <td colspan="2" ><strong>Sub-Total (V-Series)</strong></td>
+                                <td ><b><bean:write name="PemantauanForm" property="v26_cb" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="v26_a" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="v26_r" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="v26_ce" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="v26_cb1" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="percenV26" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="percenRAllocationV26" /></b></td>
+                            </tr>
+                            <tr>
+                                <td >V28000 - Maintenance &amp; Minor Repair Service</td>
+                                <td width="143" ><bean:write name="PemantauanForm" property="sodoName_28" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b28_cb" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b28_a" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b28_s" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b28_ce" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b28_cb1" /></td>
+                                <td  rowspan="1"></td>
+                            </tr>
+                            <tr bgcolor="#FFFF99">
+                                <td colspan="2" ><strong>Sub-Total (V-Series)</strong></td>
+                                <td ><b><bean:write name="PemantauanForm" property="v28_cb" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="v28_a" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="v28_r" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="v28_ce" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="v28_cb1" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="percenV28" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="percenRAllocationV28" /></b></td>
+                            </tr>
+                            <tr>
+                                <td >V29000 - Professional Services</td>
+                                <td ><bean:write name="PemantauanForm" property="sodoName_29" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b29_cb" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b29_a" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b29_s" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b29_ce" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b29_cb1" /></td>
+                                <td  rowspan="1"></td>
+                            </tr>
+                            <tr bgcolor="#FFFF99">
+                                <td colspan="2" ><strong>Sub-Total (V-Series)</strong></td>
+                                <td ><b><bean:write name="PemantauanForm" property="v29_cb" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="v29_a" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="v29_r" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="v29_ce" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="v29_cb1" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="percenV29" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="percenRAllocationV29" /></b></td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2" >V35000 - Special Equipment &amp; Accessories</td>
+                                <td ><bean:write name="PemantauanForm" property="sodoName_35" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b35_cb" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b35_a" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b35_s" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b35_ce" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b35_cb1" /></td>
+                                <td  rowspan="2"></td>
+                            </tr>
+                            <tr>
+                                <td ><bean:write name="PemantauanForm" property="sodoName_36" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b36_cb" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b36_a" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b36_s" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b36_ce" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b36_cb1" /></td>
+                            </tr>
+                            <tr bgcolor="#FFFF99">
+                                <td colspan="2" ><strong>Sub-Total (V-Series)</strong></td>
+                                <td ><b><bean:write name="PemantauanForm" property="v35_cb" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="v35_a" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="v35_r" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="v35_ce" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="v35_cb1" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="percenV35" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="percenRAllocationV35" /></b></td>
+                            </tr>
+
+                            <tr>
+                                <td >V40000 - Biasiswa, Dermasiswa dan Bantuan Pelajaran</td>
+                                <td ><bean:write name="PemantauanForm" property="sodoName_41" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b41_cb" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b41_a" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b41_s" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b41_ce" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b41_cb1" /></td>
+                                <td  rowspan="1"></td>
+                            </tr>
+                            <tr bgcolor="#FFFF99">
+                                <td colspan="2" ><strong>Sub-Total (V-Series)</strong></td>
+                                <td ><b><bean:write name="PemantauanForm" property="v40_cb" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="v40_a" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="v40_r" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="v40_ce" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="v40_cb1" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="percenV40" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="percenRAllocationV40" /></b></td>
+                            </tr>
+                
+
+                            <tr>
+                                <td >V50000 - Other Charges &amp; Distribution</td>
+                                <td ><bean:write name="PemantauanForm" property="sodoName_52" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b52_cb" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b52_a" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b52_s" /></td>
+                                <td ><bean:write name="PemantauanForm" property="b52_ce" /></td>
+
+                                <td ><bean:write name="PemantauanForm" property="b52_cb1" /></td>
+                                <td  rowspan="1"></td>
+                            </tr>
+                            <tr bgcolor="#FFFF99">
+                                <td colspan="2" ><strong>Sub-Total (V-Series)</strong></td>
+                                <td ><b><bean:write name="PemantauanForm" property="v50_cb" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="v50_a" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="v50_r" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="v50_ce" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="v50_cb1" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="percenV50" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="percenRAllocationV50" /></b></td>
+                            </tr>
+
+                            <tr bgcolor="#B20011">
+                                <td >Total (RM) </td>
+                                <td >&nbsp;</td>
+                                <td ><b><bean:write name="PemantauanForm" property="total_app" /> </b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="total_current" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="total_r" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="totalCurrentEx" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="totalEx" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="total_percentage" /></b></td>
+                                <td ><b><bean:write name="PemantauanForm" property="total_percentageRAllocation" /></b></td>
+                            </tr>
+                        </table>
+                    </div>
+
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
