@@ -35,6 +35,11 @@ namespace radisutm.Controllers
             GrantDB modelPI = new GrantDB();
             return View("GrantDashboard", modelPI.GetGrantPI());
         }
+
+        public ActionResult NewGrant()
+        {
+            return View("Proposal");
+        }
         
         public ActionResult Home()
         {

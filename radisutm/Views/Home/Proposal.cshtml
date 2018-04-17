@@ -1,94 +1,1478 @@
-﻿
-@{
-    ViewBag.Title = "Proposal";
-    Layout = "~/Views/Home/GrantProfile.cshtml";
-}
-
-
-<div class="m-portlet m-portlet--tabs m-portlet--brand m-portlet--head-solid-bg m-portlet--bordered">
-    <div class="m-portlet__head">
-        <div class="m-portlet__head-tools">
-            <ul class="nav nav-tabs m-tabs-line m-tabs-line--primary" role="tablist">
-                <li class="nav-item m-tabs__item">
-                    <a class="nav-link m-tabs__link  active" data-toggle="tab" href="#m_tabs_12_1" role="tab" aria-expanded="true">
-                        <i class="la la-file-o"></i>
-                        Basic Info
-                    </a>
-                </li>
-                <li class="nav-item m-tabs__item">
-                    <a class="nav-link m-tabs__link" data-toggle="tab" href="#m_tabs_12_2" role="tab" aria-expanded="false">
-                        <i class="la la-file-text"></i>
-                        Details
-                    </a>
-                </li>
-                <li class="nav-item m-tabs__item">
-                    <a class="nav-link m-tabs__link" data-toggle="tab" href="#m_tabs_12_3" role="tab" aria-expanded="false">
-                        <i class="la la-users"></i>
-                        Members
-                    </a>
-                </li>
-                <li class="nav-item m-tabs__item">
-                    <a class="nav-link m-tabs__link" data-toggle="tab" href="#m_tabs_12_4" role="tab" aria-expanded="false">
-                        <i class="la la-history"></i>
-                        History
-                    </a>
-                </li>
-
-                <li class="nav-item m-tabs__item">
-                    <a class="nav-link m-tabs__link" data-toggle="tab" href="#m_tabs_12_5" role="tab" aria-expanded="false">
-                        <i class="la la-tv"></i>
-                        Equipment
-                    </a>
-                </li>
-                <li class="nav-item m-tabs__item">
-                    <a class="nav-link m-tabs__link" data-toggle="tab" href="#m_tabs_12_6" role="tab" aria-expanded="false">
-                        <i class="la la-money"></i>
-                        Budget
-                    </a>
-                </li>
-                <li class="nav-item m-tabs__item">
-                    <a class="nav-link m-tabs__link" data-toggle="tab" href="#m_tabs_12_7" role="tab" aria-expanded="false">
-                        <i class="la la-upload"></i>
-                        Attachment
-                    </a>
-                </li>
-                <li class="nav-item m-tabs__item">
-                    <a class="nav-link m-tabs__link" data-toggle="tab" href="#m_tabs_12_8" role="tab" aria-expanded="false">
-                        <i class="la la-pencil-square"></i>
-                        Declaration
-                    </a>
-                </li>
-            </ul>
+﻿<div class="m-subheader ">
+    <div class="d-flex align-items-center">
+        <div class="mr-auto">
+            <h3 class="m-subheader__title ">
+                Grant Application / Registration
+            </h3>
         </div>
     </div>
+</div>      
 
+  <div class="m-content">
+            <!--begin::Portlet-->
+            <div class="m-portlet">
+                @*<div class="m-portlet__head">
+                    <div class="m-portlet__head-caption">
+                        <div class="m-portlet__head-title">
+                            <h3 class="m-portlet__head-text">
+                                Basic Tabs
+                            </h3>
+                        </div>
+                    </div>
+                </div>*@
+                <div class="m-portlet__body">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#m_tabs_1_1">
+                                <i class="la la-file-o"></i>
+                                <small> Basic Info </small>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#m_tabs_1_2" role="button" aria-haspopup="true" aria-expanded="false">
+                                <i class="la la-file-text"></i>
+                                <small> Details</small>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#m_tabs_1_3">
+                                <i class="la la-users"></i>
+                                <small> Members</small>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#m_tabs_1_4" role="button" aria-haspopup="true" aria-expanded="false">
+                                <i class="la la-history"></i>
+                                <small>  History</small>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#m_tabs_1_5" role="button" aria-haspopup="true" aria-expanded="false">
+                                <i class="la la-tv"></i>
+                                <small> Equipment</small>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#m_tabs_1_6" role="button" aria-haspopup="true" aria-expanded="false">
+                                <i class="la la-money"></i>
+                                <small>  Budget</small>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#m_tabs_1_7" role="button" aria-haspopup="true" aria-expanded="false">
+                                <i class="la la-upload"></i>
+                                <small>  Attachment</small>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#m_tabs_1_8" role="button" aria-haspopup="true" aria-expanded="false">
+                                <i class="la la-pencil-square"></i>
+                                <small>  Declaration</small>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#m_tabs_1_9" role="button" aria-haspopup="true" aria-expanded="false">
+                                <i class="la la-pencil-square"></i>
+                                <small>  Verification</small>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
 
-    <div class="m-portlet__body">
-        <div class="tab-content">
-            <div class="tab-pane active" id="m_tabs_12_1" role="tabpanel" aria-expanded="true">
-               
+                        <!--Basic Info tab-->
+                        <div class="tab-pane active" id="m_tabs_1_1" role="tabpanel">
+
+                            <!-- Start form-->
+                            <div class="form-group m-form__group row">
+                                <label class="col-lg-2 col-form-label">
+                                    Title of Research
+                                </label>
+                                <div class="col-10">
+                                    <input id="pro_title" class="form-control m-input" type="text" placeholder="Enter title of research" required>
+                                </div>
+                            </div>
+                            <div class="form-group m-form__group row">
+                                <label class="col-lg-2 col-form-label">
+                                    Start Date
+                                </label>
+                                <div class="col-lg-4">
+                                    <div class='input-group date' id='m_datepicker_2'>
+                                        <input id="pro_datestart" type='text' class="form-control m-input" required readonly placeholder="Select date" required>
+                                        <span class="input-group-addon">
+                                            <i class="la la-calendar-check-o"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <label class="col-lg-2 col-form-label">
+                                    End Date
+                                </label>
+                                <div class="col-lg-4">
+                                    <div class='input-group date' id='m_datepicker_2'>
+                                        <input id="pro_dateend" type='text' class="form-control m-input" readonly placeholder="Select date" required>
+                                        <span class="input-group-addon">
+                                            <i class="la la-calendar-check-o"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group m-form__group row">
+                                <label class="col-lg-2 col-form-label">
+                                    Duration
+                                </label>
+                                <div class="col-5">
+                                    <input id="proj_duration" class="form-control m-input" type="text" placeholder="Duration of research" required>
+                                </div>
+                            </div>
+                            <div class="form-group m-form__group row">
+                                <label class="col-lg-2 col-form-label">
+                                    Type of Grant
+                                </label>
+                                <div class="col-lg-10">
+                                    <select id="ptypedetail_fk" class="form-control m-input" required>
+                                        <option selected disabled>Please Choose</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group m-form__group row">
+                                <label class="col-lg-2 col-form-label">
+                                    Grant Category
+                                </label>
+                                <div class="col-lg-10">
+                                    <select class="form-control m-input" id="ptypedetail_category" required>
+                                        <option selected disabled>Please Choose</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group m-form__group row">
+                                <label class="col-lg-2 col-form-label">
+                                    RMK
+                                </label>
+                                <div class="col-lg-10">
+                                    <select class="form-control m-input" id="rmk" required>
+                                        <option selected disabled>Please Choose</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group m-form__group row">
+                                <label class="col-lg-2 col-form-label">
+                                    Phase
+                                </label>
+                                <div class="col-lg-10">
+                                    <select class="form-control m-input" id="phase_fk" required>
+                                        <option selected disabled>Please Choose</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group m-form__group row">
+                                <label class="col-lg-2 col-form-label">
+                                    Category Sponsor
+                                </label>
+                                <div class="col-lg-10">
+                                    <select class="form-control m-input" id="sponsor_fk_cat" required>
+                                        <option selected disabled>Please Choose</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group m-form__group row">
+                                <label class="col-lg-2 col-form-label">
+                                    Sponsor Agency
+                                </label>
+                                <div class="col-lg-10">
+                                    <select class="form-control m-input" id="sponsor_fk" required>
+                                        <option selected disabled>Please Choose</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group m-form__group row">
+                                <label class="col-lg-2 col-form-label">
+                                    Sub-Sponsor
+                                </label>
+                                <div class="col-lg-10">
+                                    <select class="form-control m-input" id="subsponsor_fk" required>
+                                        <option selected disabled>Please Choose</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group m-form__group row">
+                                <label class="col-lg-2 col-form-label">
+                                    Sub-Sponsor Details
+                                </label>
+                                <div class="col-lg-10">
+                                    <select class="form-control m-input" id="sponsordetail_fk" required>
+                                        <option selected disabled>Please Choose</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group m-form__group row">
+                                <label class="col-lg-2 col-form-label">
+                                    FOR Division
+                                </label>
+                                <div class="col-lg-10">
+                                    <select class="form-control m-input" id="" required>
+                                        <option selected disabled>Please Choose</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group m-form__group row">
+                                <label class="col-lg-2 col-form-label">
+                                    FOR Category
+                                </label>
+                                <div class="col-lg-10">
+                                    <select class="form-control m-input" id="" required>
+                                        <option selected disabled>Please Choose</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group m-form__group row">
+                                <label class="col-lg-2 col-form-label">
+                                    FOR Group
+                                </label>
+                                <div class="col-lg-10">
+                                    <select class="form-control m-input" id="forgroup_fk" required>
+                                        <option selected disabled>Please Choose</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group m-form__group row">
+                                <label class="col-lg-2 col-form-label">
+                                    FOR Area
+                                </label>
+                                <div class="col-lg-10">
+                                    <select class="form-control m-input" id="forarea_fk" required>
+                                        <option selected disabled>Please Choose</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group m-form__group row">
+                                <label class="col-lg-2 col-form-label">
+                                    SEO Category
+                                </label>
+                                <div class="col-lg-10">
+                                    <select class="form-control m-input" id="" required>
+                                        <option selected disabled>Please Choose</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group m-form__group row">
+                                <label class="col-lg-2 col-form-label">
+                                    SEO Group
+                                </label>
+                                <div class="col-lg-10">
+                                    <select class="form-control m-input" id="seogroup_fk" required>
+                                        <option selected disabled>Please Choose</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group m-form__group row">
+                                <label class="col-lg-2 col-form-label">
+                                    SEO Area
+                                </label>
+                                <div class="col-lg-10">
+                                    <select class="form-control m-input" id="seoarea_fk" required>
+                                        <option selected disabled>Please Choose</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group m-form__group row">
+                                <label class="col-lg-2 col-form-label">
+                                    Research Area
+                                </label>
+                                <div class="col-lg-10">
+                                    <select class="form-control m-input" id="rescourse_id" required>
+                                        <option selected disabled>Please Choose</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group m-form__group row">
+                                <label class="col-lg-2 col-form-label">
+                                    Research Classification
+                                </label>
+                                <div class="col-lg-10">
+                                    <select class="form-control m-input" id="classification_fk" required>
+                                        <option selected disabled>Please Choose</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group m-form__group row">
+                                <label class="col-lg-2 col-form-label">
+                                    Commersialisation
+                                </label>
+                                <div class="col-lg-10">
+                                    <select class="form-control m-input" id="commercial_fk" required>
+                                        <option selected disabled>Please Choose</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group m-form__group row">
+                                <label class="col-lg-2 col-form-label">
+                                    Collaboration
+                                </label>
+                                <div class="col-lg-10">
+                                    <select class="form-control m-input" id="collaboration_type" required>
+                                        <option selected disabled>Please Choose</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group m-form__group row">
+                                <label class="col-lg-2 col-form-label">
+                                    Collaborator Name
+                                </label>
+                                <div class="col-10">
+                                    <input class="form-control m-input" type="text" placeholder="Enter collaborator name" id="collaborator_name" required>
+                                </div>
+                            </div>
+                            <div class="form-group m-form__group row">
+                                <label class="col-lg-2 col-form-label">
+                                    Collaboration Proof
+                                </label>
+                                <div class="col-lg-5">
+                                    <label class="custom-file input-group m-input-group">
+                                        <input type="file" id="file2" class="custom-file-input">
+                                        <span class="custom-file-control input-group-addon" id="basic-addon1">
+                                            <i class="fa fa-cloud-upload"></i>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group m-form__group row">
+                                <label class="col-lg-2 col-form-label">
+                                    Keyword
+                                </label>
+                                <div class="col-lg-10">
+                                    <textarea id="keyword" class="form-control m-input" rows="2" required></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group m-form__group row">
+                                <label class="col-lg-2 col-form-label">
+                                    Executive Summary
+                                </label>
+                                <div class="col-lg-10">
+                                    <textarea id="executive_summary" class="form-control m-input" rows="3" required></textarea>
+                                </div>
+                            </div>
+                            <div class="m-portlet__foot m-portlet__no-border m-portlet__foot--fit">
+                                <div class="m-form__actions m-form__actions--solid">
+                                    <div class="row">
+                                        <div class="col-lg-5"></div>
+                                        <div class="col-lg-7">
+                                            <button onclick="submit()" class="btn btn-brand">
+                                                Submit
+                                            </button>
+                                            <button type="cancel" class="btn btn-secondary">
+                                                Cancel
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End form-->
+                        </div>
+
+                        <!-- Details tab-->
+                        <div class="tab-pane" id="m_tabs_1_2" role="tabpanel">
+                            <div class="form-group m-form__group">
+                                <h4>
+                                    <label for="exampleTextarea">
+                                        Background
+                                    </label>
+                                </h4>
+                                <label for="exampleTextarea">
+                                    Research background including Hypothesis/ Research Question and Literature Review
+                                </label>
+                                <textarea class="form-control m-input" id="exampleTextarea" rows="3"></textarea>
+                            </div>
+
+                            <div class="form-group m-form__group">
+                                <h4>
+                                    <label for="exampleTextarea">
+                                        Methodology
+                                    </label>
+                                </h4>
+                                <label for="exampleTextarea">
+                                    Description of Methodology
+                                </label>
+                                <textarea class="form-control m-input" id="exampleTextarea" rows="3"></textarea>
+                            </div>
+
+                            <div class="form-group m-form__group">
+                                <h4>
+                                    <label for="exampleInputEmail1">
+                                        Objective
+                                    </label>
+                                </h4>
+                                <div class="row">
+                                    <div class="col-lg-8">
+                                        <input type="email" class="form-control m-input" placeholder="Enter objective">
+                                    </div>
+                                    <div class=" m--align-left">
+                                        <button type="button" class="btn m-btn--pill btn-primary">
+                                            Add & Save
+                                        </button>
+                                        <button type="button" class="btn m-btn--pill btn-danger">
+                                            Cancel
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="m-section">
+                                    <span class="m-section__sub">
+                                        &nbsp;
+                                    </span>
+                                    <div class="m-section__content">
+                                        <table class="table table-sm m-table m-table--head-bg-brand" width="80%">
+                                            <thead class="thead-inverse">
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Objective</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">1</th>
+                                                    <td>Jhon</td>
+                                                    <td>Stone</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">2</th>
+                                                    <td>Lisa</td>
+                                                    <td>Nilson</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">3</th>
+                                                    <td>Larry</td>
+                                                    <td>the Bird</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group m-form__group">
+                                <h3>
+                                    <label for="exampleInputEmail1">
+                                        Schedule
+                                    </label>
+                                </h3>
+                                <div class="form-group m-form__group row">
+                                    <label class="col-lg-1 col-form-label">
+                                        Task
+                                    </label>
+                                    <div class="col-5">
+                                        <input class="form-control m-input" type="text" placeholder="Enter task" id="">
+                                    </div>
+                                </div>
+                                <div class="form-group m-form__group row">
+                                    <label class="col-lg-1 col-form-label">
+                                        Start Date
+                                    </label>
+                                    <div class="col-lg-3">
+                                        <div class='input-group date' id='m_datepicker_2'>
+                                            <input type='text' class="form-control m-input" readonly placeholder="Select start date" />
+                                            <span class="input-group-addon">
+                                                <i class="la la-calendar-check-o"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group m-form__group row">
+                                    <label class="col-lg-1 col-form-label">
+                                        End Date
+                                    </label>
+                                    <div class="col-lg-3">
+                                        <div class='input-group date' id='m_datepicker_2'>
+                                            <input type='text' class="form-control m-input" readonly placeholder="Select end date" />
+                                            <span class="input-group-addon">
+                                                <i class="la la-calendar-check-o"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group m-form__group row">
+                                    <label class="col-lg-1 col-form-label">
+                                        &nbsp;
+                                    </label>
+                                    <div class="col-lg-3">
+                                        <button type="button" class="btn m-btn--pill btn-primary">
+                                            Save
+                                        </button>
+                                        <button type="button" class="btn m-btn--pill    btn-danger">
+                                            Cancel
+                                        </button>
+                                    </div><br>
+                                </div>
+
+                                <div class="m-section">
+                                    <div class="m-section__content">
+                                        <table class="table table-sm m-table m-table--head-bg-brand">
+                                            <thead class="thead-inverse">
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Task</th>
+                                                    <th>Start Date</th>
+                                                    <th>End Date</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">1</th>
+                                                    <td>Task 1</td>
+                                                    <td>26/07/2017</td>
+                                                    <td>26/10/2017</td>
+                                                    <td>Delete</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">2</th>
+                                                    <td>Task 2</td>
+                                                    <td>08/11/2017</td>
+                                                    <td>26/07/2018</td>
+                                                    <td>Delete</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">3</th>
+                                                    <td>Task 3</td>
+                                                    <td>08/11/2017</td>
+                                                    <td>26/07/2018</td>
+                                                    <td>Delete</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group m-form__group">
+                                <h3>
+                                    <label for="exampleInputEmail1">
+                                        Milestone
+                                    </label>
+                                </h3>
+                                <div class="form-group m-form__group row">
+                                    <label class="col-lg-1 col-form-label">
+                                        Milestone
+                                    </label>
+                                    <div class="col-5">
+                                        <input class="form-control m-input" type="text" placeholder="Enter task" id="">
+                                    </div>
+                                </div>
+                                <div class="form-group m-form__group row">
+                                    <label class="col-lg-1 col-form-label">
+                                        Start Date
+                                    </label>
+                                    <div class="col-lg-3">
+                                        <div class='input-group date' id='m_datepicker_2'>
+                                            <input type='text' class="form-control m-input" readonly placeholder="Select start date" />
+                                            <span class="input-group-addon">
+                                                <i class="la la-calendar-check-o"></i>
+                                            </span>
+                                        </div>
+                                    </div><br>
+                                </div>
+
+                                <div class="form-group m-form__group row">
+                                    <label class="col-lg-1 col-form-label">
+                                        &nbsp;
+                                    </label>
+                                    <div class="col-lg-3">
+                                        <button type="button" class="btn m-btn--pill btn-primary">
+                                            Save
+                                        </button>
+                                        <button type="button" class="btn m-btn--pill    btn-danger">
+                                            Cancel
+                                        </button>
+                                    </div><br>
+                                </div>
+
+                                <div class="m-section">
+                                    <div class="m-section__content">
+                                        <table class="table table-sm m-table m-table--head-bg-brand" width="80%">
+                                            <thead class="thead-inverse">
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Task</th>
+                                                    <th>Start Date</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">1</th>
+                                                    <td>Task 1</td>
+                                                    <td>26/07/2017</td>
+                                                    <td>Delete</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">2</th>
+                                                    <td>Task 2</td>
+                                                    <td>08/11/2017</td>
+                                                    <td>Delete</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="m-portlet__foot m-portlet__no-border m-portlet__foot--fit">
+                                <div class="m-form__actions m-form__actions--solid">
+                                    <div class="row">
+                                        <div class="col-lg-5"></div>
+                                        <div class="col-lg-7">
+                                            <button type="reset" class="btn btn-brand">
+                                                Submit
+                                            </button>
+                                            <button type="reset" class="btn btn-secondary">
+                                                Cancel
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- members tab-->
+                        <div class="tab-pane" id="m_tabs_1_3" role="tabpanel">
+                            <div class="m-scrollable" data-scrollable="true" data-max-height="200" style="height: 400px; overflow: hidden;">
+                                <div class="m-list-timeline m-list-timeline--skin-light">
+                                    <!--begin::Section-->
+                                    <div class="m-section">
+                                        <div class="m-section__content">
+                                            <table class="table table-sm m-table m-table--head-bg-brand">
+                                                <thead class="thead-inverse">
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>MyKad No / Passport</th>
+                                                        <th>Name</th>
+                                                        <th>Category</th>
+                                                        <th>Institution / Industry</th>
+                                                        <th>CV</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">1</th>
+                                                        <td>Jhon</td>
+                                                        <td>Stone</td>
+                                                        <td>jho</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">2</th>
+                                                        <td>Jhon</td>
+                                                        <td>Stone</td>
+                                                        <td>jho</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">3</th>
+                                                        <td>Jhon</td>
+                                                        <td>Stone</td>
+                                                        <td>jho</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">4</th>
+                                                        <td>Jhon</td>
+                                                        <td>Stone</td>
+                                                        <td>jho</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">5</th>
+                                                        <td>Jhon</td>
+                                                        <td>Stone</td>
+                                                        <td>jho</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">6</th>
+                                                        <td>Jhon</td>
+                                                        <td>Stone</td>
+                                                        <td>jho</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">7</th>
+                                                        <td>Jhon</td>
+                                                        <td>Stone</td>
+                                                        <td>jho</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">9</th>
+                                                        <td>Jhon</td>
+                                                        <td>Stone</td>
+                                                        <td>jho</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">10</th>
+                                                        <td>Jhon</td>
+                                                        <td>Stone</td>
+                                                        <td>jho</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">11</th>
+                                                        <td>Jhon</td>
+                                                        <td>Stone</td>
+                                                        <td>jho</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">12</th>
+                                                        <td>Jhon</td>
+                                                        <td>Stone</td>
+                                                        <td>jho</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">11</th>
+                                                        <td>Jhon</td>
+                                                        <td>Stone</td>
+                                                        <td>jho</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">12</th>
+                                                        <td>Jhon</td>
+                                                        <td>Stone</td>
+                                                        <td>jho</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br /><br>
+
+                            <button onclick="location.href='/member';" class="btn btn-brand">
+                                Add Member
+                            </button>
+                        </div>
+
+                        <!-- History tab-->
+                        <div class="tab-pane" id="m_tabs_1_4" role="tabpanel">
+                            <div class="alert m-alert m-alert--default" role="alert">
+                                <strong>Research projects headed by the Applicant that have been completed or currently ongoing in the last three (3) years.</strong>
+                            </div>
+
+                            <div class="m-scrollable" data-scrollable="true" data-max-height="200" style="height: 400px; overflow: hidden;">
+                                <div class="m-list-timeline m-list-timeline--skin-light">
+                                    <!--begin::Section-->
+                                    <div class="m-section">
+                                        <div class="m-section__content">
+                                            <table class="table table-sm m-table m-table--head-bg-brand">
+                                                <thead class="thead-inverse">
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Title of Research</th>
+                                                        <th>Duration</th>
+                                                        <th>Type of Grant</th>
+                                                        <th>Start Date</th>
+                                                        <th>End Date</th>
+                                                        <th>Project Status</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">1</th>
+                                                        <td>Jhon</td>
+                                                        <td>Stone</td>
+                                                        <td>jho</td>
+                                                        <td>30 Oct 2017</td>
+                                                        <td>30 Oct 2018</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">2</th>
+                                                        <td>Jhon</td>
+                                                        <td>Stone</td>
+                                                        <td>jho</td>
+                                                        <td>30 Oct 2017</td>
+                                                        <td>30 Oct 2018</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">3</th>
+                                                        <td>Jhon</td>
+                                                        <td>Stone</td>
+                                                        <td>jho</td>
+                                                        <td>30 Oct 2017</td>
+                                                        <td>30 Oct 2018</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">4</th>
+                                                        <td>Jhon</td>
+                                                        <td>Stone</td>
+                                                        <td>jho</td>
+                                                        <td>30 Oct 2017</td>
+                                                        <td>30 Oct 2018</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">5</th>
+                                                        <td>Jhon</td>
+                                                        <td>Stone</td>
+                                                        <td>jho</td>
+                                                        <td>30 Oct 2017</td>
+                                                        <td>30 Oct 2018</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">6</th>
+                                                        <td>Jhon</td>
+                                                        <td>Stone</td>
+                                                        <td>jho</td>
+                                                        <td>30 Oct 2017</td>
+                                                        <td>30 Oct 2018</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">7</th>
+                                                        <td>Jhon</td>
+                                                        <td>Stone</td>
+                                                        <td>jho</td>
+                                                        <td>30 Oct 2017</td>
+                                                        <td>30 Oct 2018</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">9</th>
+                                                        <td>Jhon</td>
+                                                        <td>Stone</td>
+                                                        <td>jho</td>
+                                                        <td>30 Oct 2017</td>
+                                                        <td>30 Oct 2018</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><br><br>
+
+                            <div class="alert m-alert m-alert--default" role="alert">
+                                <strong>Information on academic publications that has been published by the researcher for the last three (3) years.</strong>
+                            </div>
+
+                            <div class="m-scrollable" data-scrollable="true" data-max-height="200" style="height: 400px; overflow: hidden;">
+                                <div class="m-list-timeline m-list-timeline--skin-light">
+                                    <!--begin::Section-->
+                                    <div class="m-section">
+                                        <div class="m-section__content">
+                                            <table class="table table-sm m-table m-table--head-bg-brand">
+                                                <thead class="thead-inverse">
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Title of Publication</th>
+                                                        <th>Source</th>
+                                                        <th>Impact Factor (IF)</th>
+                                                        <th>Year Published</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">1</th>
+                                                        <td>Jhon</td>
+                                                        <td>Stone</td>
+                                                        <td>jho</td>
+                                                        <td>2015</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">2</th>
+                                                        <td>Jhon</td>
+                                                        <td>Stone</td>
+                                                        <td>jho</td>
+                                                        <td>2016</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">3</th>
+                                                        <td>Jhon</td>
+                                                        <td>Stone</td>
+                                                        <td>jho</td>
+                                                        <td>2016</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">4</th>
+                                                        <td>Jhon</td>
+                                                        <td>Stone</td>
+                                                        <td>jho</td>
+                                                        <td>2016</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">5</th>
+                                                        <td>Jhon</td>
+                                                        <td>Stone</td>
+                                                        <td>jho</td>
+                                                        <td>2016</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">6</th>
+                                                        <td>Jhon</td>
+                                                        <td>Stone</td>
+                                                        <td>jho</td>
+                                                        <td>2016</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Equipment tab-->
+                        <div class="tab-pane" id="m_tabs_1_5" role="tabpanel">
+                            <div class="form-group m-form__group row">
+                                <label class="col-lg-2 col-form-label">
+                                    Name of equipment and/or material
+                                </label>
+                                <div class="col-lg-10">
+                                    <textarea class="form-control m-input" name="equip_name" id="equip_name" required></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group m-form__group row">
+                                <label class="col-lg-2 col-form-label">
+                                    Location
+                                </label>
+                                <div class="col-lg-4">
+                                    <select class="form-control m-input" name="location" id="location" required>
+                                        <option selected disabled>Please Choose</option>
+                                    </select>
+                                </div>
+                                <label class="col-lg-2 col-form-label">
+                                    Place
+                                </label>
+                                <div class="col-4">
+                                    <input id="place" name="place" class="form-control m-input" type="text" required>
+                                </div>
+                            </div>
+
+                            <div class="m-portlet__foot m-portlet__no-border m-portlet__foot--fit">
+                                <div class="m-form__actions m-form__actions--solid">
+                                    <div class="row">
+                                        <div class="col-lg-5"></div>
+                                        <div class="col-lg-7">
+                                            <button type="save" class="btn btn-brand">
+                                                Save
+                                            </button>
+                                            <button type="cancel" class="btn btn-secondary">
+                                                Cancel
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><br>
+
+                            <div class="m-scrollable" data-scrollable="true" data-max-height="200" style="height: 400px; overflow: hidden;">
+                                <div class="m-list-timeline m-list-timeline--skin-light">
+                                    <!--begin::Section-->
+                                    <div class="m-section">
+                                        <div class="m-section__content">
+                                            <table class="table table-sm m-table m-table--head-bg-brand">
+                                                <thead class="thead-inverse">
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Equipment/Material</th>
+                                                        <th>Location</th>
+                                                        <th>Place</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">1</th>
+                                                        <td>Jhon</td>
+                                                        <td>Stone</td>
+                                                        <td>jho</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">2</th>
+                                                        <td>Jhon</td>
+                                                        <td>Stone</td>
+                                                        <td>jho</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">3</th>
+                                                        <td>Jhon</td>
+                                                        <td>Stone</td>
+                                                        <td>jho</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">4</th>
+                                                        <td>Jhon</td>
+                                                        <td>Stone</td>
+                                                        <td>jho</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">2</th>
+                                                        <td>Jhon</td>
+                                                        <td>Stone</td>
+                                                        <td>jho</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Budget tab-->
+                        <div class="tab-pane" id="m_tabs_1_6" role="tabpanel">
+                            <table class="table table-bordered m-table m-table--border-brand m-table--head-bg-brand" style="font:small">
+                                <thead>
+                                    <tr>
+                                        <th>V-Series </th>
+                                        <th>SODO Type</th>
+                                        <th>Approved Allocation (Original) <br> (RADIS) </th>
+                                        <th>Approved Allocation (New) <br> (RADIS)</th>
+                                        <th>Received Allocation <br>(UTMFin)</th>
+                                        <th>Current Expenditure <br> Include Committed(UTMFin)</th>
+                                        <th>Received Current Balance <br>(Received Allocation - Current Expenditure)</th>
+                                        <th>Percentage of expenditure (%)<br>(Approved Allocation (new))</th>
+                                        <th>Percentage of expenditure (%)<br>(Received Allocation)</th>
+                                    </tr>
+                                </thead>
+                                <tr>
+                                    <td rowspan="5">V11000 - Salary, Wages &amp; Overtime</td>
+
+                                    <td><bean:write name="PemantauanForm" property="sodoName_1" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b11_cb" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b11_a" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b11_s" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b11_ce" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b11_cb1" /></td>
+                                    <td rowspan="5"></td>
+                                </tr>
+
+                                <tr>
+                                    <td><bean:write name="PemantauanForm" property="sodoName_2" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b12_cb" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b12_a" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b12_s" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b12_ce" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b12_cb1" /></td>
+                                </tr>
+                                <tr>
+                                    <td><bean:write name="PemantauanForm" property="sodoName_13" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b13_cb" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b13_a" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b13_s" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b13_ce" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b13_cb1" /></td>
+                                </tr>
+                                <tr>
+                                    <td><bean:write name="PemantauanForm" property="sodoName_14" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b14_cb" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b14_a" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b14_s" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b14_cb1" /></td>
+                                </tr>
+                                <tr>
+                                    <td><bean:write name="PemantauanForm" property="sodoName_15" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b15_cb" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b15_a" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b15_s" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b15_ce" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b15_cb1" /></td>
+                                </tr>
+                                <tr bgcolor="#FFFF99">
+                                    <td colspan="2"><strong>Sub-Total (V-Series)</strong></td>
+                                    <td><b><bean:write name="PemantauanForm" property="v11_cb" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="v11_a" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="v11_r" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="v11_ce" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="v11_cb1" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="percenV11" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="percenRAllocationV11" /></b></td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">V21000 - Travelling Expenses &amp; Subsistence</td>
+                                    <td><bean:write name="PemantauanForm" property="sodoName_21" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b21_cb" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b21_a" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b21_s" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b21_ce" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b21_cb1" /></td>
+                                    <td rowspan="2"></td>
+                                </tr>
+                                <tr>
+                                    <td><bean:write name="PemantauanForm" property="sodoName_22" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b22_cb" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b22_a" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b22_s" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b22_ce" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b22_cb1" /></td>
+                                </tr>
+                                <tr bgcolor="#FFFF99">
+                                    <td colspan="2"><strong>Sub-Total (V-Series)</strong></td>
+                                    <td><b><bean:write name="PemantauanForm" property="v21_cb" /></b></td>
+                                    <td><bean:write name="PemantauanForm" property="v12_a" /></td>
+                                    <td><b><bean:write name="PemantauanForm" property="v12_r" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="v21_ce" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="v21_cb1" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="percenV21" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="percenRAllocationV21" /></b></td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2" bgcolor="#FFFFFF">V24000 -Rentals</td>
+                                    <td bgcolor="#FFFFFF"><bean:write name="PemantauanForm" property="sodoName_23" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b23_cb" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b23_a" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b23_s" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b23_ce" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b23_cb1" /></td>
+                                    <td rowspan="2"></td>
+                                </tr>
+                                <tr>
+                                    <td><bean:write name="PemantauanForm" property="sodoName_24" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b24_cb" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b24_a" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b24_s" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b24_ce" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b24_cb1" /></td>
+                                </tr>
+                                <tr bgcolor="#FFFF99">
+                                    <td colspan="2"><strong>Sub-Total (V-Series)</strong></td>
+                                    <td><b><bean:write name="PemantauanForm" property="v24_cb" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="v24_a" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="v24_r" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="v24_ce" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="v24_cb1" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="percenV24" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="percenRAllocationV24" /></b></td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">V26000 - Research Materials &amp; Supplies</td>
+                                    <td><bean:write name="PemantauanForm" property="sodoName_26" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b26_cb" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b26_a" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b26_s" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b26_ce" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b26_cb1" /></td>
+                                    <td rowspan="2"></td>
+                                </tr>
+                                <tr>
+                                    <td><bean:write name="PemantauanForm" property="sodoName_27" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b27_cb" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b27_a" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b27_s" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b27_ce" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b27_cb1" /></td>
+                                </tr>
+                                <tr bgcolor="#FFFF99">
+                                    <td colspan="2"><strong>Sub-Total (V-Series)</strong></td>
+                                    <td><b><bean:write name="PemantauanForm" property="v26_cb" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="v26_a" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="v26_r" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="v26_ce" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="v26_cb1" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="percenV26" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="percenRAllocationV26" /></b></td>
+                                </tr>
+                                <tr>
+                                    <td>V28000 - Maintenance &amp; Minor Repair Service</td>
+                                    <td width="143"><bean:write name="PemantauanForm" property="sodoName_28" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b28_cb" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b28_a" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b28_s" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b28_ce" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b28_cb1" /></td>
+                                    <td rowspan="1"></td>
+                                </tr>
+                                <tr bgcolor="#FFFF99">
+                                    <td colspan="2"><strong>Sub-Total (V-Series)</strong></td>
+                                    <td><b><bean:write name="PemantauanForm" property="v28_cb" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="v28_a" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="v28_r" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="v28_ce" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="v28_cb1" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="percenV28" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="percenRAllocationV28" /></b></td>
+                                </tr>
+                                <tr>
+                                    <td>V29000 - Professional Services</td>
+                                    <td><bean:write name="PemantauanForm" property="sodoName_29" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b29_cb" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b29_a" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b29_s" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b29_ce" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b29_cb1" /></td>
+                                    <td rowspan="1"></td>
+                                </tr>
+                                <tr bgcolor="#FFFF99">
+                                    <td colspan="2"><strong>Sub-Total (V-Series)</strong></td>
+                                    <td><b><bean:write name="PemantauanForm" property="v29_cb" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="v29_a" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="v29_r" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="v29_ce" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="v29_cb1" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="percenV29" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="percenRAllocationV29" /></b></td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">V35000 - Special Equipment &amp; Accessories</td>
+                                    <td><bean:write name="PemantauanForm" property="sodoName_35" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b35_cb" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b35_a" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b35_s" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b35_ce" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b35_cb1" /></td>
+                                    <td rowspan="2"></td>
+                                </tr>
+                                <tr>
+                                    <td><bean:write name="PemantauanForm" property="sodoName_36" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b36_cb" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b36_a" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b36_s" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b36_ce" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b36_cb1" /></td>
+                                </tr>
+                                <tr bgcolor="#FFFF99">
+                                    <td colspan="2"><strong>Sub-Total (V-Series)</strong></td>
+                                    <td><b><bean:write name="PemantauanForm" property="v35_cb" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="v35_a" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="v35_r" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="v35_ce" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="v35_cb1" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="percenV35" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="percenRAllocationV35" /></b></td>
+                                </tr>
+
+                                <tr>
+                                    <td>V40000 - Biasiswa, Dermasiswa dan Bantuan Pelajaran</td>
+                                    <td><bean:write name="PemantauanForm" property="sodoName_41" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b41_cb" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b41_a" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b41_s" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b41_ce" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b41_cb1" /></td>
+                                    <td rowspan="1"></td>
+                                </tr>
+                                <tr bgcolor="#FFFF99">
+                                    <td colspan="2"><strong>Sub-Total (V-Series)</strong></td>
+                                    <td><b><bean:write name="PemantauanForm" property="v40_cb" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="v40_a" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="v40_r" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="v40_ce" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="v40_cb1" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="percenV40" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="percenRAllocationV40" /></b></td>
+                                </tr>
+                                <tr>
+                                    <td>V50000 - Other Charges &amp; Distribution</td>
+                                    <td><bean:write name="PemantauanForm" property="sodoName_52" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b52_cb" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b52_a" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b52_s" /></td>
+                                    <td><bean:write name="PemantauanForm" property="b52_ce" /></td>
+
+                                    <td><bean:write name="PemantauanForm" property="b52_cb1" /></td>
+                                    <td rowspan="1"></td>
+                                </tr>
+                                <tr bgcolor="#FFFF99">
+                                    <td colspan="2"><strong>Sub-Total (V-Series)</strong></td>
+                                    <td><b><bean:write name="PemantauanForm" property="v50_cb" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="v50_a" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="v50_r" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="v50_ce" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="v50_cb1" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="percenV50" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="percenRAllocationV50" /></b></td>
+                                </tr>
+                                <tr bgcolor="#B20011">
+                                    <td>Total (RM) </td>
+                                    <td>&nbsp;</td>
+                                    <td><b><bean:write name="PemantauanForm" property="total_app" /> </b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="total_current" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="total_r" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="totalCurrentEx" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="totalEx" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="total_percentage" /></b></td>
+                                    <td><b><bean:write name="PemantauanForm" property="total_percentageRAllocation" /></b></td>
+                                </tr>
+                            </table>
+
+                        </div>
+
+                        <!--Attachment tab-->
+                        <div class="tab-pane" id="m_tabs_1_7" role="tabpanel">
+                            <div class="alert m-alert m-alert--default" role="alert">
+                                <strong>All compulsory forms must be submitted such as : Flow chart, Appointment letter (for PL contract staff)</strong>
+                            </div>
+
+                            <div class="m-scrollable" data-scrollable="true" data-max-height="200" style="height: 400px; overflow: hidden;">
+                                <div class="m-list-timeline m-list-timeline--skin-light">
+                                    <!--begin::Section-->
+                                    <div class="m-section">
+                                        <div class="m-section__content">
+                                            <table class="table table-sm m-table m-table--head-bg-brand">
+                                                <thead class="thead-inverse">
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Attachment Type</th>
+                                                        <th>Description</th>
+                                                        <th>Uploaded</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">1</th>
+                                                        <td>Jhon</td>
+                                                        <td>Stone</td>
+                                                        <td>jho</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">2</th>
+                                                        <td>Jhon</td>
+                                                        <td>Stone</td>
+                                                        <td>jho</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">3</th>
+                                                        <td>Jhon</td>
+                                                        <td>Stone</td>
+                                                        <td>jho</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">4</th>
+                                                        <td>Jhon</td>
+                                                        <td>Stone</td>
+                                                        <td>jho</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">5</th>
+                                                        <td>Jhon</td>
+                                                        <td>Stone</td>
+                                                        <td>jho</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">6</th>
+                                                        <td>Jhon</td>
+                                                        <td>Stone</td>
+                                                        <td>jho</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
+
+                            <div class="form-group m-form__group row">
+                                <label class="col-lg-2 col-form-label">
+                                    Attachment Type
+                                </label>
+                                <div class="col-lg-3">
+                                    <select class="form-control m-input" id="" required>
+                                        <option>Others</option>
+                                        <option>Flowchart</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group m-form__group row">
+                                <label class="col-lg-2 col-form-label">
+                                    Description
+                                </label>
+                                <div class="col-lg-4">
+                                    <textarea class="form-control m-input" rows="3" required></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group m-form__group row">
+                                <div class="col-lg-12 col-md-6 col-sm-12">
+                                    <div class="m-dropzone dropzone" action="inc/api/dropzone/upload.php" id="m-dropzone-one">
+                                        <div class="m-dropzone__msg dz-message needsclick">
+                                            <h3 class="m-dropzone__msg-title">
+                                                Drop files here or click to upload.
+                                            </h3>
+                                            <span class="m-dropzone__msg-desc">
+                                                Please upload PDF format only and file size must below than 30MB
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="m-portlet__foot m-portlet__no-border m-portlet__foot--fit">
+                                <div class="m-form__actions m-form__actions--solid">
+                                    <div class="row">
+                                        <div class="col-lg-5"></div>
+                                        <div class="col-lg-7">
+                                            <button type="submit" id="" class="btn btn-brand">
+                                                Upload
+                                            </button>
+                                            <button type="cancel" class="btn btn-secondary">
+                                                Reset
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Declaration tab-->
+                        <div class="tab-pane" id="m_tabs_1_8" role="tabpanel">
+                            <div class="form-group m-form__group m--margin-top-10">
+                                <div class="alert m-alert m-alert--default" role="alert">
+                                    <div class="m-checkbox-list">
+                                        <label class="m-checkbox m-checkbox--solid m-checkbox--success">
+                                            <input type="checkbox">
+                                            All information given are correct. UTM has the right to reject or to cancel the offer without notice if there is any incorrect information given.
+                                            <span></span>
+                                        </label>
+                                        <label class="m-checkbox m-checkbox--solid m-checkbox--success">
+                                            <input type="checkbox">
+                                            I hereby agree to accept the offer to conduct research upon generation and activation of cost center to the proposed research project and will understand and comply to all terms and condition as the following.
+                                            <span></span>
+                                        </label>
+                                        <label class="m-checkbox m-checkbox--solid m-checkbox--success">
+                                            <input type="checkbox">
+                                            I am heading a research project registered with RMC which is currently active.
+                                            <span></span>
+                                        </label>
+                                    </div>
+
+                                    <div class="m-form__group form-group">
+                                        <label for="">
+                                            <h5><br>Terms & Conditions</h5>
+                                        </label><br>
+                                        <label for="">
+                                            I promise that i will -
+                                        </label>
+                                        <ol>
+                                            <li> Conduct the research diligently in order to complete the project succssfully according to the approved plan.</li>
+                                            <li> Strive earnestly and be fully committed to contribute to the research output KPIs as promised in the research application that is 0.0 RU marks. The detail of the KPI output is given in Table 1.</li>
+                                            <li> Submit progress report every 6 month to RMC.</li>
+                                            <li> Submit 3 final report within 3 month after the research project ends.</li>
+                                            <li> Submit an application for project extension in 3 months prior to the project end date if I need additional time.</li>
+                                            <li> Fulfill all rules and regulations issued by RMC from time to time.</li>
+                                            <li> Understande and comply with the procedures for appointing RO/ARO/RA/RSG/WSS which requires no appointment among relatives as stipulated in the Bursar Circular Letter No. 3/2010 or any related regulations.</li>
+                                            <li> Manage research funds properly and in accordance with procedures set out in the Bursar Circular No. 7/2010.</li>
+                                            <li> Manage research capital assets as set out in the Bursar Circular No. 2/2007.</li>
+                                            <li> Agree that the project will be officially terminated without any warning letter or notices, if there is no expenditure being made or if the project progress is not satisfactory.</li>
+                                            <li> Fulfill all rules and regulations issued by RMC from time to time.</li>
+                                        </ol>
+                                        I hereby understand that I can be subjected to discriplinery action if I breach any of the above terms and the relevant regulations of the University.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="m-portlet__foot m-portlet__no-border m-portlet__foot--fit">
+                                <div class="m-form__actions m-form__actions--solid">
+                                    <div class="row">
+                                        <div class="col-lg-5"></div>
+                                        <div class="col-lg-7">
+                                            <button type="submit" id="" class="btn btn-brand">
+                                                Submit
+                                            </button>
+                                            <button type="cancel" class="btn btn-secondary">
+                                                Cancel
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Verification tab-->
+                        <div class="tab-pane" id="m_tabs_1_9" role="tabpanel">
+                            I hereby understand that I can be subjected to discriplinery action if I breach any of the above terms and the relevant regulations of the University.
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="tab-pane" id="m_tabs_12_2" role="tabpanel" aria-expanded="false">
-            
-            </div>
-            <div class="tab-pane " id="m_tabs_12_3" role="tabpanel" aria-expanded="false">
-               
-            </div>
-            <div class="tab-pane" id="m_tabs_12_4" role="tabpanel" aria-expanded="false">
-              
-            </div>
-            <div class="tab-pane" id="m_tabs_12_5" role="tabpanel" aria-expanded="false">
-               
-            </div>
-            <div class="tab-pane" id="m_tabs_12_6" role="tabpanel" aria-expanded="false">
-               
-            </div>
-            <div class="tab-pane" id="m_tabs_12_7" role="tabpanel" aria-expanded="false">
-              
-            </div>
-            <div class="tab-pane" id="m_tabs_12_8" role="tabpanel" aria-expanded="false">
-             
-            </div>
+            <!--end::Portlet-->
         </div>
-    </div>
-</div>
